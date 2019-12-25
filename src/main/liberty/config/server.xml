@@ -1,0 +1,12 @@
+<server description="OpenLiberty Test 1">
+    <featureManager>
+<!--        <feature>servlet-4.0</feature>-->
+        <feature>microProfile-3.2</feature>
+    </featureManager>
+
+<!--    <httpEndpoint httpPort="${default.http.port}" httpsPort="${default.https.port}" id="defaultHttpEndpoint" host="*"/>-->
+        <httpEndpoint id="defaultHttpEndpoint"
+                      httpPort="8182"
+                      httpsPort="8543"/>
+    <webApplication id="openliberty-test-1" location="test-1-0.0.1.war" contextRoot="test1"/>
+</server>
