@@ -33,8 +33,8 @@ dependencies {
 }
 
 tasks.compileJava.configure {
-    sourceCompatibility = "11"
-    targetCompatibility = "11"
+    sourceCompatibility = "13"
+    targetCompatibility = "13"
     options.encoding = "UTF-8"
     options.compilerArgs.add("-Xlint:unchecked")
     options.compilerArgs.add("-Xlint:deprecation")
