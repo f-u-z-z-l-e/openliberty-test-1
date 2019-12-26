@@ -1,12 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <server description="OpenLiberty Test 1">
     <featureManager>
-<!--        <feature>servlet-4.0</feature>-->
-        <feature>microProfile-3.2</feature>
+        <!--        <feature>microProfile-3.2</feature>-->
+        <feature>appSecurity-2.0</feature>
+        <feature>restConnector-2.0</feature>
+        <feature>servlet-4.0</feature>
+        <feature>jdbc-4.2</feature>
+        <feature>jndi-1.0</feature>
+        <feature>jpa-2.2</feature>
     </featureManager>
 
-<!--    <httpEndpoint httpPort="${default.http.port}" httpsPort="${default.https.port}" id="defaultHttpEndpoint" host="*"/>-->
-        <httpEndpoint id="defaultHttpEndpoint"
-                      httpPort="8182"
-                      httpsPort="8543"/>
+    <keyStore id="defaultKeyStore" password="liberty"/>
+    <quickStartSecurity userName="admin" userPassword="admin77"/>
+
+    <dataSource id="DefaultDataSourceA"
+                jndiName="jdbc/postgresql"
+                jdbcDriverRef="postgresql-driver"
+                type="javax.sql.ConnectionPoolDataSource"
+                transactional="true">
+        <properties serverName="liberty-testcase-db"
+                    portNumber="5432"
+                    databaseName="testcasedb"
+                    user="testcasedbuser"
+                    password="testcasedbpassword"/>
+    </dataSource>
+
+    <jdbcDriver id="postgresql-driver"
+                javax.sql.XADataSource="org.postgresql.xa.PGXADataSource"
+                javax.sql.ConnectionPoolDataSource="org.postgresql.ds.PGConnectionPoolDataSource"
+                libraryRef="postgresql-library"/>
+
+    <library id="postgresql-library">
+        <fileset id="PostgreSQLFileset"
+                 dir="/opt/ol/wlp/lib"
+                 includes="postgresql-42.2.9.jar"/>
+    </library>
+
+    <!--    <httpEndpoint httpPort="${default.http.port}" httpsPort="${default.https.port}" id="defaultHttpEndpoint" host="*"/>-->
+    <httpEndpoint id="defaultHttpEndpoint"
+                  httpPort="8182"
+                  httpsPort="8543"/>
     <webApplication id="openliberty-test-1" location="test-1-0.0.1.war" contextRoot="test1"/>
 </server>

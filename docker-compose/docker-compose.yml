@@ -25,3 +25,11 @@ services:
     volumes:
       - liberty-testcase-db-volume:/var/lib/postgresql/data
     restart: "no"
+
+  liberty-testcase-app:
+    container_name: liberty-testcase-app
+    image: docker.pkg.github.com/f-u-z-z-l-e/ch.fuzzle.openliberty/test-1
+    networks:
+      liberty-testcase-net:
+        ipv4_address: 172.22.0.20
+    restart: "no"
