@@ -1,0 +1,27 @@
+version: "3.7"
+
+networks:
+  liberty-testcase-net:
+    ipam:
+      config:
+        - subnet: 172.22.0.0/24
+
+volumes:
+  liberty-testcase-db-volume:
+
+services:
+  liberty-testcase-db:
+    container_name: liberty-testcase-db
+    image: postgres:12.1-alpine
+    networks:
+      liberty-testcase-net:
+        ipv4_address: 172.22.0.10
+    expose:
+      - 5432
+    environment:
+      POSTGRES_DB: testcasedb
+      POSTGRES_USER: testcasedbuser
+      POSTGRES_PASSWORD: testcasedbpassword
+    volumes:
+      - liberty-testcase-db-volume:/var/lib/postgresql/data
+    restart: "no"
