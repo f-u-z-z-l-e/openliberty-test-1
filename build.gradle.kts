@@ -17,6 +17,7 @@ plugins {
     java
     war
     id("ch.fuzzle.gradle.semver") version "0.3.2"
+    id("ch.fuzzle.gradle.docker-plugin") version "0.1.3"
 }
 
 group = "ch.fuzzle.openliberty"
