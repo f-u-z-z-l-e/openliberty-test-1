@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <server description="OpenLiberty Test 1">
     <featureManager>
-        <!--        <feature>microProfile-3.2</feature>-->
         <feature>appSecurity-2.0</feature>
         <feature>restConnector-2.0</feature>
         <feature>servlet-4.0</feature>
@@ -18,7 +17,7 @@
                 jdbcDriverRef="postgresql-driver"
                 type="javax.sql.ConnectionPoolDataSource"
                 transactional="true">
-        <properties serverName="liberty-testcase-db"
+        <properties serverName="172.22.0.10"
                     portNumber="5432"
                     databaseName="testcasedb"
                     user="testcasedbuser"
@@ -31,9 +30,7 @@
                 libraryRef="postgresql-library"/>
 
     <library id="postgresql-library">
-        <fileset id="PostgreSQLFileset"
-                 dir="/opt/ol/wlp/lib"
-                 includes="postgresql-42.2.9.jar"/>
+        <fileset dir="${server.config.dir}/jdbc"/>
     </library>
 
     <!--    <httpEndpoint httpPort="${default.http.port}" httpsPort="${default.https.port}" id="defaultHttpEndpoint" host="*"/>-->

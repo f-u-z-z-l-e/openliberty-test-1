@@ -31,8 +31,6 @@ dependencies {
     providedCompile("javax.servlet:javax.servlet-api:4.0.1")
     providedCompile("io.openliberty.features:jpa-2.2:19.0.0.12")
 
-//    implementation("org.postgresql:postgresql:42.2.9")
-
     testImplementation("commons-httpclient:commons-httpclient:3.1")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.5.2")
     testImplementation("org.junit.jupiter:junit-jupiter-engine:5.5.2")
