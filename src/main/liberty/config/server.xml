@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <server description="OpenLiberty Test 1">
     <featureManager>
-        <feature>appSecurity-2.0</feature>
-        <feature>restConnector-2.0</feature>
-        <feature>servlet-4.0</feature>
-        <feature>jdbc-4.2</feature>
-        <feature>jndi-1.0</feature>
+<!--        <feature>javaee-8.0</feature>-->
+<!--        <feature>appSecurity-2.0</feature>-->
+<!--        <feature>restConnector-2.0</feature>-->
+<!--        <feature>servlet-4.0</feature>-->
+<!--        <feature>jdbc-4.2</feature>-->
+<!--        <feature>jndi-1.0</feature>-->
+<!--        <feature>ejb-3.2</feature>-->
+        <feature>cdi-2.0</feature>
+        <feature>ejbLite-3.2</feature>
+        <feature>jaxrs-2.1</feature>
         <feature>jpa-2.2</feature>
     </featureManager>
 
@@ -34,8 +39,8 @@
     </library>
 
     <!--    <httpEndpoint httpPort="${default.http.port}" httpsPort="${default.https.port}" id="defaultHttpEndpoint" host="*"/>-->
-    <httpEndpoint id="defaultHttpEndpoint"
-                  httpPort="8182"
-                  httpsPort="8543"/>
-    <webApplication id="openliberty-test-1" location="test-1-0.0.1.war" contextRoot="test1"/>
+    <!--    <httpEndpoint id="defaultHttpEndpoint"-->
+    <!--                  httpPort="8182"-->
+    <!--                  httpsPort="8543"/>-->
+    <!--    <webApplication id="openliberty-test-1" location="test-1-0.0.1.war" contextRoot="test1"/>-->
 </server>

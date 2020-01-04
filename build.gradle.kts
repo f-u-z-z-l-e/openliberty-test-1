@@ -28,8 +28,8 @@ repositories {
 
 dependencies {
     libertyRuntime("io.openliberty:openliberty-runtime:19.0.0.12")
-    providedCompile("javax.servlet:javax.servlet-api:4.0.1")
     providedCompile("io.openliberty.features:jpa-2.2:19.0.0.12")
+    providedCompile("io.openliberty.features:microProfile-3.2:19.0.0.12")
 
     testImplementation("commons-httpclient:commons-httpclient:3.1")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.5.2")
@@ -59,3 +59,6 @@ tasks {
         useJUnitPlatform()
     }
 }
+
+// https://localhost:8543/ibm/api/validation/dataSource/DefaultDataSourceA
+// http://172.22.0.20:8182/test1/servlet

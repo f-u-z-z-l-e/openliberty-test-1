@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="PostgreSQL -testcasedb" uuid="e4eba616-f2bf-490a-9492-f1bd7b552ebd">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://172.22.0.10:5432/testcasedb</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="User Data Source -" uuid="f5bd0695-c11a-4f0b-b530-ef3d5bf9a2e5">
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>java.sql.Driver</jdbc-driver>
+    </data-source>
+  </component>
+</project>
