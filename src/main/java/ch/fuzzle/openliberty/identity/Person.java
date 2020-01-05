@@ -13,7 +13,7 @@ public class Person implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private Integer id;
 
     private String firstname;
 
@@ -56,7 +56,7 @@ public class Person implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Person person = (Person) o;
-        return id == person.id &&
+        return Objects.equals(id, person.id) &&
                 Objects.equals(firstname, person.firstname) &&
                 Objects.equals(lastname, person.lastname);
     }

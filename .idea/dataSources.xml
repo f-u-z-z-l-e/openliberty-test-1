@@ -7,10 +7,5 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://172.22.0.10:5432/testcasedb</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="User Data Source -" uuid="f5bd0695-c11a-4f0b-b530-ef3d5bf9a2e5">
-      <synchronize>true</synchronize>
-      <configured-by-url>true</configured-by-url>
-      <jdbc-driver>java.sql.Driver</jdbc-driver>
-    </data-source>
   </component>
 </project>

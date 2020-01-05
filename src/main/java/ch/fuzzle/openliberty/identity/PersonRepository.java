@@ -10,7 +10,7 @@ public class PersonRepository {
     @PersistenceContext(name = "jpa-unit")
     private EntityManager em;
 
-    public int createPerson(Person person) {
+    public Integer createPerson(Person person) {
         Person persistedPerson = em.merge(person);
         return persistedPerson.getId();
     }
