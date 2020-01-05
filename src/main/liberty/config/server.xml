@@ -8,8 +8,10 @@
         <!--        <feature>jdbc-4.2</feature>-->
         <!--        <feature>jndi-1.0</feature>-->
         <!--        <feature>ejb-3.2</feature>-->
+        <!--        <feature>jsonp-1.1</feature>-->
         <feature>cdi-2.0</feature>
         <feature>ejbLite-3.2</feature>
+        <feature>jsonb-1.0</feature>
         <feature>jaxrs-2.1</feature>
         <feature>jpa-2.2</feature>
     </featureManager>

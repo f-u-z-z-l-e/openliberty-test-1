@@ -38,7 +38,7 @@ public class PersonResource {
     @Consumes(APPLICATION_JSON)
     public Response createPerson(Person person) {
         int personId = repository.createPerson(person);
-        URI build = UriBuilder.fromUri(uriInfo.getRequestUri()).path("/{personId}").build(personId);
-        return Response.created(build).build();
+        URI location = UriBuilder.fromUri(uriInfo.getRequestUri()).path("/{personId}").build(personId);
+        return Response.created(location).build();
     }
 }

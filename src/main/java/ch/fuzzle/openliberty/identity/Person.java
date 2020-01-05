@@ -1,11 +1,13 @@
 package ch.fuzzle.openliberty.identity;
 
+import javax.json.bind.annotation.JsonbPropertyOrder;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
 @Table(name = "person")
+@JsonbPropertyOrder({"id", "firstname", "lastname"})
 public class Person implements Serializable {
     private static final long serialVersionUID = 615394686230954784L;
 
