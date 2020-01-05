@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <server description="OpenLiberty Test 1">
     <featureManager>
-<!--        <feature>javaee-8.0</feature>-->
-<!--        <feature>appSecurity-2.0</feature>-->
-<!--        <feature>restConnector-2.0</feature>-->
-<!--        <feature>servlet-4.0</feature>-->
-<!--        <feature>jdbc-4.2</feature>-->
-<!--        <feature>jndi-1.0</feature>-->
-<!--        <feature>ejb-3.2</feature>-->
+        <!--        <feature>javaee-8.0</feature>-->
+        <!--        <feature>appSecurity-2.0</feature>-->
+        <!--        <feature>restConnector-2.0</feature>-->
+        <!--        <feature>servlet-4.0</feature>-->
+        <!--        <feature>jdbc-4.2</feature>-->
+        <!--        <feature>jndi-1.0</feature>-->
+        <!--        <feature>ejb-3.2</feature>-->
         <feature>cdi-2.0</feature>
         <feature>ejbLite-3.2</feature>
         <feature>jaxrs-2.1</feature>
         <feature>jpa-2.2</feature>
     </featureManager>
-
+    <logging traceSpecification="eclipselink.logging=FINE"
+             traceFileName="trace.log"
+             maxFileSize="20"
+             maxFiles="10"
+             traceFormat="BASIC"/>
     <keyStore id="defaultKeyStore" password="liberty"/>
     <quickStartSecurity userName="admin" userPassword="admin77"/>
 
