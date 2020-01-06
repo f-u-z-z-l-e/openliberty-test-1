@@ -12,7 +12,8 @@ public class Person implements Serializable {
     private static final long serialVersionUID = 615394686230954784L;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "PersonSequence")
+    @SequenceGenerator(name = "PersonSequence", sequenceName = "person_seq", allocationSize = 1)
     private Integer id;
 
     private String firstname;

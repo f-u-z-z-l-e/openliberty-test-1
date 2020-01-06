@@ -35,6 +35,8 @@ dependencies {
     providedCompile("io.openliberty.features:jaxrs-2.1:19.0.0.12")
     providedCompile("io.openliberty.features:jpa-2.2:19.0.0.12")
 
+    implementation("org.flywaydb:flyway-core:6.1.3")
+
     testImplementation("commons-httpclient:commons-httpclient:3.1")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.5.2")
     testImplementation("org.junit.jupiter:junit-jupiter-engine:5.5.2")

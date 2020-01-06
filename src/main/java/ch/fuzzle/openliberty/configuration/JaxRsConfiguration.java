@@ -1,4 +1,4 @@
-package ch.fuzzle.openliberty;
+package ch.fuzzle.openliberty.configuration;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
